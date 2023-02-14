@@ -9,6 +9,9 @@ Next, DIRECTIONS
 I assume you already wiped your CMOS and defaulted (optimized defaults) config to bring you back to that 'Golden Config', as the vendors love to call it.
 This is to ensure none of your screwed up settings interfere with the changes made here; as they can bring your board temporarily (if it does, press the tiny CMOS reset button on the back by the BIOS FLASHBACK button. This tiny button is right above it, and almost level with the backplate of the board itself.
 
+
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+
 1. COPY the ROM files I have included to your FAT32 formatted USB drive with a single FAT32 partition ONLY. No hidden EFI partition. NONE.
 
 
@@ -31,6 +34,11 @@ Begin by pressing and holding that FLASHBACK button for about 3 FULL seconds. Yo
 8. PRESS the bios CMOS erase button above it for good measure once you hear the fans roar to life.
 
 9. Enter BIOSUEFI. Press F7. Or Press ADVANCED MODE. 
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
 
 Enjoy you bios TWEAKER. Tweak away and I will not take any responsibilty for any issues you may run into. These are OFF for a good reason. Most cannot comprehend their value or function. Lucky for us, I learned BIOS UEFI modding over trial and error, and 3 bricked systems later (fixed by CH341A programmer)
 I also have tested this, for at least a month, initially with BIOS build 0700~ something, and later modded this 0812 build. ALL RAN without issues; as long as you know how to reset CMOS in the event your system doesn't like your configuration settings. Keep bios backups, BUT DO NOT RESTORE old bios settings saved. Most likely the BIOS firmware won't even allow you; for good measure. "wrong board" error, thank you for saving countless lives. I mean boards. Hero.
