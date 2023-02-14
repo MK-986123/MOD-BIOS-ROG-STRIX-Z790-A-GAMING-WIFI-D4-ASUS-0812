@@ -10,7 +10,7 @@ I assume you already wiped your CMOS and defaulted (optimized defaults) config t
 This is to ensure none of your screwed up settings interfere with the changes made here; as they can bring your board temporarily (if it does, press the tiny CMOS reset button on the back by the BIOS FLASHBACK button. This tiny button is right above it, and almost level with the backplate of the board itself.
 
 
-VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 
 1. COPY the ROM files I have included to your FAT32 formatted USB drive with a single FAT32 partition ONLY. No hidden EFI partition. NONE.
 
@@ -35,7 +35,7 @@ Begin by pressing and holding that FLASHBACK button for about 3 FULL seconds. Yo
 
 9. Enter BIOSUEFI. Press F7. Or Press ADVANCED MODE. 
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 
