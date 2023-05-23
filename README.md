@@ -1,13 +1,15 @@
 # MOD-BIOS-ROG-STRIX-Z790-A-GAMING-WIFI-D4-ASUS-0812
-Modded ASUS Z790 A Gaming D4 bios. Clean (virus total results included) SIMPLE INSTRUCTIONS. Also, if your CPU malfunctions &amp; starts global nuclear war.. congrats. You failed us all.
+Modded ASUS Z790 A Gaming D4 bios. Clean (virus total results included) SIMPLE INSTRUCTIONS. 
+Also, if your CPU malfunctions.. starts global nuclear war.. Not sure what to say man.
 
-FIRST and FOREMOST, I present the virus total results; and you are free to upload and scan it for your own safety. In FACT I insist you do so to get yourself in the habit here and onwards:
+The virus total results; you are free to upload and scan it for your own safety. 
+In FACT I insist you do so yourself, in order to get yourself in the habit:
 https://www.virustotal.com/gui/file/ac0ae61b23c0ac6007c2981a12cc824f66b08e21d51308015d425c69881852c5
 
 Next, DIRECTIONS
 
-I assume you already wiped your CMOS and defaulted (optimized defaults) config to bring you back to that 'Golden Config', as the vendors love to call it.
-This is to ensure none of your screwed up settings interfere with the changes made here; as they can bring your board temporarily (if it does, press the tiny CMOS reset button on the back by the BIOS FLASHBACK button. This tiny button is right above it, and almost level with the backplate of the board itself.
+I assume you already wiped your CMOS and defaulted (optimized defaults) config to bring you back to that 'Golden Config', thats supposed to support as many devices as possible from the moment it is powered on.
+This is to ensure none of your screwed up, hacked up, settings interfere with the changes made here; as they can bring your board temporarily (if it does, press the tiny CMOS reset button on the back by the BIOS FLASHBACK button. This tiny button is right above it, and almost level with the backplate of the board itself.
 
 
 VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
@@ -22,7 +24,12 @@ VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 4. Insert the USB drive with the TWO files copied (one is named 'SZ790AD4.CAP' and the next 'ASUS.CAP', for good measure .. identical minus the naming on the files. Some boards look for asus, others lean on the exact model tag.)
 
 NEXT and ADHERE TO THESE DIRECTIONS PLEASE. DO NOT POWER YOUR SYSTEM OFF BY ANY MEANS EVEN IF THE CURIOSITY IN YOU SAYS OTHERWISE.
->> NO << >> DO NOT << do it. DO NOT. Have I made myself clear? Good.
+
+                     >> NO POWER OFF << 
+>> NO MODIFYING DURING LIGHTNING STORMS OR BAD WEATHER <<
+>> POWER OUTAGE = CH341A I will not help you with tthis. <<
+>> Countless tutorials if you search "CH341A BIOS TUTORIAL" <<
+
 
 5. With the USB inserted into port mentioned, and the computer fully POWERED OFF BUT PLUGGED IN, and power supply set to "on", but the system being SHUT DOWN...
 Begin by pressing and holding that FLASHBACK button for about 3 FULL seconds. You will see a light flash, that means it has started. Your Z790 will most likely light up on the HEATSINK lights by the rear panel / CPU VRM. GOOD.
@@ -33,17 +40,20 @@ Begin by pressing and holding that FLASHBACK button for about 3 FULL seconds. Yo
 
 8. PRESS the bios CMOS erase button above it for good measure once you hear the fans roar to life.
 
-9. Enter BIOSUEFI. Press F7. Or Press ADVANCED MODE. 
+9. Enter BIOS. Press F7. Or Press ADVANCED MODE. 
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 
 
-Enjoy you bios TWEAKER. Tweak away and I will not take any responsibilty for any issues you may run into. These are OFF for a good reason. Most cannot comprehend their value or function. Lucky for us, I learned BIOS UEFI modding over trial and error, and 3 bricked systems later (fixed by CH341A programmer)
-I also have tested this, for at least a month, initially with BIOS build 0700~ something, and later modded this 0812 build. ALL RAN without issues; as long as you know how to reset CMOS in the event your system doesn't like your configuration settings. Keep bios backups, BUT DO NOT RESTORE old bios settings saved. Most likely the BIOS firmware won't even allow you; for good measure. "wrong board" error, thank you for saving countless lives. I mean boards. Hero.
+Enjoy you bios TWEAKER. Tweak away and I will not take any responsibilty for any issues you may run into. These are OFF for a good reason.
+I also have tested this, for at least 3 months, initially with BIOS build 0700~ something, and later modded this 0812 build. ALL RAN without issues; as long as you know how to reset CMOS in the event your system doesn't like your configuration settings. 
+Keep bios backups.
+DO NOT RESTORE old bios settings saved.
 
-Anyways, feel free to tweak anything and reupload. I don't care for credit. I did this for self hobby and my own interest. I had no intention of satisfying yours... but you're lucky I thought of you, yes, you. And my desire to release my build.. initialized and booted successfully. 
+Feel free to tweak anything and reupload. I don't care for credit. 
+I did this for self hobby and my own interest. 
 
-Enjoy and ASUS IS THE SOLE OWNER of the bios by any measure, no matter how many mods you or I make. They deserve all the credit here. Thank you.
-:) <3
+#Tweakallthethings
+@Modifyyourlife
