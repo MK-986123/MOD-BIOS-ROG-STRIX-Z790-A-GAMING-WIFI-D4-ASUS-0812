@@ -1,59 +1,83 @@
-# MOD-BIOS-ROG-STRIX-Z790-A-GAMING-WIFI-D4-ASUS-0812
-Modded ASUS Z790 A Gaming D4 bios. Clean (virus total results included) SIMPLE INSTRUCTIONS. 
-Also, if your CPU malfunctions.. starts global nuclear war.. Not sure what to say man.
+# ASUS Z790-A Gaming D4 (Modded BIOS) Flashback Guide
 
-The virus total results; you are free to upload and scan it for your own safety. 
-In FACT I insist you do so yourself, in order to get yourself in the habit:
-https://www.virustotal.com/gui/file/ac0ae61b23c0ac6007c2981a12cc824f66b08e21d51308015d425c69881852c5
+This guide explains how to safely flash a modded BIOS using the built-in USB Flashback feature on your ASUS Z790-A Gaming D4 motherboard.  
+Follow these steps exactly. Improper handling during a flash can render your board unbootable.
 
-Next, DIRECTIONS
+---
 
-I assume you already wiped your CMOS and defaulted (optimized defaults) config to bring you back to that 'Golden Config', thats supposed to support as many devices as possible from the moment it is powered on.
-This is to ensure none of your screwed up, hacked up, settings interfere with the changes made here; as they can bring your board temporarily (if it does, press the tiny CMOS reset button on the back by the BIOS FLASHBACK button. This tiny button is right above it, and almost level with the backplate of the board itself.
+## Important Notes & Warnings
 
+- **Verify the file yourself**: Always download the BIOS file and scan it independently. The modded ROM linked here has been scanned, but you should get into the habit of verifying files yourself.  
+  VirusTotal link for reference:  
+  https://www.virustotal.com/gui/file/ac0ae61b23c0ac6007c2981a12cc824f66b08e21d51308015d425c69881852c5
 
-VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+- **Clear CMOS first**: Ensure your system is on optimized defaults. This prevents conflicts with prior settings. Use the rear CMOS reset button (just above the Flashback button) if necessary.
 
-1. COPY the ROM files I have included to your FAT32 formatted USB drive with a single FAT32 partition ONLY. No hidden EFI partition. NONE.
+- **Do not interrupt power**: Loss of power during flashing will corrupt the BIOS. If this happens, recovery may require an external programmer (CH341A). Do not attempt this procedure during storms or unstable power conditions.
 
+- **No restoring old profiles**: Saved BIOS profiles from earlier versions can cause instability. Reconfigure settings manually after flashing.
 
-2. Power off your Desktop system and let the heart racing moment of fear.. drive you FORWARD TOWARDS the curiosity you have burning within you. It's what brought you here, isnt it? :)
+---
 
-3. LOCATED the BIOS FLASHBACK USB port on the rear right below the FLASHBACK button. It is colored different, and says FLASHBACK on it. You can't miss it. 
+## Preparation
 
-4. Insert the USB drive with the TWO files copied (one is named 'SZ790AD4.CAP' and the next 'ASUS.CAP', for good measure .. identical minus the naming on the files. Some boards look for asus, others lean on the exact model tag.)
+1. **USB drive setup**  
+   - Use a small USB stick (≤ 32 GB recommended).  
+   - Format it as **FAT32**, single partition only (no hidden EFI partitions).  
+   - Copy both files into the root directory:  
+     - `SZ790AD4.CAP`  
+     - `ASUS.CAP`  
+     (They are identical; some boards require one name, others the other.)
 
-NEXT and ADHERE TO THESE DIRECTIONS PLEASE. DO NOT POWER YOUR SYSTEM OFF BY ANY MEANS EVEN IF THE CURIOSITY IN YOU SAYS OTHERWISE.
+2. **System state**  
+   - Shut down the PC completely.  
+   - Leave the PSU switch **ON** so the board receives standby power.  
+   - The system must remain OFF (not in sleep, not rebooting).
 
-                     >> NO POWER OFF << 
->> NO MODIFYING DURING LIGHTNING STORMS OR BAD WEATHER <<
->> POWER OUTAGE = CH341A I will not help you with tthis. <<
->> Countless tutorials if you search "CH341A BIOS TUTORIAL" <<
+---
 
+## Flashing Procedure
 
-5. With the USB inserted into port mentioned, and the computer fully POWERED OFF BUT PLUGGED IN, and power supply set to "on", but the system being SHUT DOWN...
-Begin by pressing and holding that FLASHBACK button for about 3 FULL seconds. You will see a light flash, that means it has started. Your Z790 will most likely light up on the HEATSINK lights by the rear panel / CPU VRM. GOOD.
+1. Insert the USB stick into the dedicated **BIOS Flashback port** (clearly labeled, usually below the Flashback button on the rear I/O).  
 
-6. It may take anywhere from 1-8 MINUTES. DO NOT unplug the power, DO NOT press any buttons. DO NOT do anything but sit there with your life flashing before your very eyes.
+2. Press and hold the **BIOS Flashback button** for ~3 seconds.  
+   - The Flashback LED will begin blinking.  
+   - This indicates the update process has started.
 
-7. DING! It should power on by itself after completion, though I have seen instances where it may just turn the LED on the FLASHBACK button OFF. If that is indeed off, power on.
+3. Wait patiently.  
+   - Typical duration: **1–8 minutes**.  
+   - Do not press any keys, power off, or remove the USB stick.
 
-8. PRESS the bios CMOS erase button above it for good measure once you hear the fans roar to life.
+4. Completion is indicated when:  
+   - The Flashback LED stops blinking, OR  
+   - The board powers itself on automatically.  
 
-9. Enter BIOS. Press F7. Or Press ADVANCED MODE. 
+---
 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+## After Flashing
 
+1. If the board powers on, press the **CMOS reset button** once more for a clean start.  
+2. Enter the BIOS by pressing **DEL** during boot.  
+3. Press **F7** to switch to Advanced Mode.  
+4. Re-apply your preferred settings manually.  
+   - Do not restore old profiles.  
+   - Keep a backup of your new stable config once tested.
 
+---
 
+## Recovery (if needed)
 
-Enjoy you bios TWEAKER. Tweak away and I will not take any responsibilty for any issues you may run into. These are OFF for a good reason.
-I also have tested this, for at least 3 months, initially with BIOS build 0700~ something, and later modded this 0812 build. ALL RAN without issues; as long as you know how to reset CMOS in the event your system doesn't like your configuration settings. 
-Keep bios backups.
-DO NOT RESTORE old bios settings saved.
+- If the system fails to boot after flashing:  
+  - Clear CMOS using the rear button.  
+  - Retry with the correctly named `.CAP` file.  
+- If the BIOS is corrupted:  
+  - Use an external programmer (CH341A) to reflash the chip directly. Tutorials are widely available online.
 
-Feel free to tweak anything and reupload. I don't care for credit. 
-I did this for self hobby and my own interest. 
+---
 
-#Tweakallthethings
-@Modifyyourlife
+## Disclaimer
+
+This BIOS has been tested for stability under normal operation. However, flashing modified firmware always carries risk. Proceed only if you are comfortable with recovery methods.  
+You assume full responsibility for your hardware.
+
+---
