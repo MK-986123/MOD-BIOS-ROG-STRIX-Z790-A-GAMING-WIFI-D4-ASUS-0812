@@ -73,7 +73,6 @@ Improper flashing always carries risk.[/color]
 - **VirusTotal Report:**  
   [Link](https://www.virustotal.com/gui/file/d194e738fad73853b766ab571e24b49b0374c80399b1440f3066df48ee2060d5)
 
-![Virustotal scan|690x352](upload://boqKYj94axGHm4wyTxZGLMyjs9Y.png)
 
 ---
 
@@ -90,7 +89,3 @@ Improper flashing always carries risk.[/color]
 | Intel ME Configuration | ME State, PTT, FIPS, erase/unconfig | PTT, ME State (caution) | Erase/Unconfig wipes ME; FIPS lock |
 | Intel ME Debug Menus | HECI timeouts, polling, MCTP | None for normal use | Breaks PCIe/USB/ME → POST fail |
 
----
-
-<b>Best regards,</b>  
-<b>NOLIMITS.MAX</b>
