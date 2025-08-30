@@ -1,5 +1,5 @@
-This is a straightforward process, but it is important to understand that you are working with **low-level firmware**.[/color]  
-Improper flashing always carries risk.[/color]  
+This is a straightforward process, but it is important to understand that you are working with **low-level firmware**.
+Improper flashing always carries risk.
 
 
 * The ASUS ROG STRIX Z790 series supports **USB BIOS FlashBack**, giving you a reliable recovery path.  
