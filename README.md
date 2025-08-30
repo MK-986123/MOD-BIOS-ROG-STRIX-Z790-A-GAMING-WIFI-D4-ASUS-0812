@@ -1,83 +1,99 @@
-# ASUS Z790-A Gaming D4 (Modded BIOS) Flashback Guide
+[wrap="center"]
+[color=#912]This is a straightforward process, but it is important to understand that you are working with **low-level firmware**.[/color]  
+[color=#912]Improper flashing always carries risk.[/color]  
+[/wrap]
 
-This guide explains how to safely flash a modded BIOS using the built-in USB Flashback feature on your ASUS Z790-A Gaming D4 motherboard.  
-Follow these steps exactly. Improper handling during a flash can render your board unbootable.
-
----
-
-## Important Notes & Warnings
-
-- **Verify the file yourself**: Always download the BIOS file and scan it independently. The modded ROM linked here has been scanned, but you should get into the habit of verifying files yourself.  
-  VirusTotal link for reference:  
-  https://www.virustotal.com/gui/file/ac0ae61b23c0ac6007c2981a12cc824f66b08e21d51308015d425c69881852c5
-
-- **Clear CMOS first**: Ensure your system is on optimized defaults. This prevents conflicts with prior settings. Use the rear CMOS reset button (just above the Flashback button) if necessary.
-
-- **Do not interrupt power**: Loss of power during flashing will corrupt the BIOS. If this happens, recovery may require an external programmer (CH341A). Do not attempt this procedure during storms or unstable power conditions.
-
-- **No restoring old profiles**: Saved BIOS profiles from earlier versions can cause instability. Reconfigure settings manually after flashing.
+* The ASUS ROG STRIX Z790 series supports **USB BIOS FlashBack**, giving you a reliable recovery path.  
+* Keep a second USB stick with the **official firmware (same version)** ready so you can quickly revert if needed.  
+* This modded BIOS unlocks many hidden settings — some are experimental and can destabilize your system.  
+* Change only what you understand, and document any adjustments you make.  
 
 ---
 
-## Preparation
-
-1. **USB drive setup**  
-   - Use a small USB stick (≤ 32 GB recommended).  
-   - Format it as **FAT32**, single partition only (no hidden EFI partitions).  
-   - Copy both files into the root directory:  
-     - `SZ790AD4.CAP`  
-     - `ASUS.CAP`  
-     (They are identical; some boards require one name, others the other.)
-
-2. **System state**  
-   - Shut down the PC completely.  
-   - Leave the PSU switch **ON** so the board receives standby power.  
-   - The system must remain OFF (not in sleep, not rebooting).
+## Scope of Modification
+- **Source:** Official ASUS UEFI package for the Z790-A GAMING WIFI D4 (DDR4).  
+- **Change:** Advanced setup menus unlocked; AI Tweaker expanded; voltage sections and BCLK tuning exposed.  
+- **Stability focus:** Hazardous options (PCIe base clocks, debug voltages, experimental menus known to freeze UEFI or break boot selection) remain hidden.  
+- **Unlocked & functional:**  
+  - CFG Lock  
+  - BIOS Lock  
+  - Overclock Lock  
+  - Additional OC & debug options (research before enabling)  
 
 ---
 
-## Flashing Procedure
-
-1. Insert the USB stick into the dedicated **BIOS Flashback port** (clearly labeled, usually below the Flashback button on the rear I/O).  
-
-2. Press and hold the **BIOS Flashback button** for ~3 seconds.  
-   - The Flashback LED will begin blinking.  
-   - This indicates the update process has started.
-
-3. Wait patiently.  
-   - Typical duration: **1–8 minutes**.  
-   - Do not press any keys, power off, or remove the USB stick.
-
-4. Completion is indicated when:  
-   - The Flashback LED stops blinking, OR  
-   - The board powers itself on automatically.  
+## Board / Version
+- **Motherboard:** ASUS ROG STRIX Z790-A GAMING WIFI D4  
+- **Current Mod:** Version 3001 (unlocked advanced menus)  
 
 ---
 
-## After Flashing
+## Flashing Instructions (USB BIOS FlashBack)
+1. **Prepare the USB Drive**  
+   - Format as **FAT32** (MBR partition table).  
+   - Copy the BIOS file to the root of the USB drive:  
+     `SZ790AD4.CAP`  
 
-1. If the board powers on, press the **CMOS reset button** once more for a clean start.  
-2. Enter the BIOS by pressing **DEL** during boot.  
-3. Press **F7** to switch to Advanced Mode.  
-4. Re-apply your preferred settings manually.  
-   - Do not restore old profiles.  
-   - Keep a backup of your new stable config once tested.
+2. **Power State**  
+   - Shut the system down completely.  
+   - Leave the PSU switch set to **ON** so the board has standby power.  
+
+3. **Start FlashBack**  
+   - Insert the USB into the dedicated **BIOS FLASHBACK** port (rear I/O, labeled).  
+   - Press and hold the **FLASHBACK button** for ~3 seconds until the LED blinks three times.  
+
+![Flashback port & button|690x194](upload://s1vArHiNUkzFpDWvqh2bExU8J4c.jpeg)
+
+4. **Wait for Completion**  
+   - Flashing typically takes 1–8 minutes.  
+   - Do **not** unplug power, remove the USB, or press any buttons.  
+   - Completion is indicated when the FlashBack LED turns off.  
+
+5. **First Boot**  
+   - Power on and press **DEL** or **F2** to enter BIOS.  
+   - Confirm version reads **3001** on the Main page.  
+   - Press **F7** for Advanced Mode and reapply settings manually.  
+   - Do not restore saved profiles from older BIOS versions.  
 
 ---
 
-## Recovery (if needed)
-
-- If the system fails to boot after flashing:  
-  - Clear CMOS using the rear button.  
-  - Retry with the correctly named `.CAP` file.  
-- If the BIOS is corrupted:  
-  - Use an external programmer (CH341A) to reflash the chip directly. Tutorials are widely available online.
+## Recovery & Warnings
+- **FlashBack is your primary safety net.** If something goes wrong, re-run with a clean official BIOS of the same version on another USB stick.  
+- Avoid flashing during storms or unstable power.  
+- If FlashBack cannot recover the board, a hardware programmer (**CH341A + SOIC clip**) can reflash the BIOS chip. Tutorials are available on this forum.  
 
 ---
 
-## Disclaimer
+## Downloads (Version 3001)
+- **Google Drive (7z):**  
+  [ASUS-Z790-MOD-SZ790AD4-v.3001.7z](https://drive.google.com/file/d/1J9ouznNMKamQJ349FlTuUjKXuglQTLcT/view?usp=sharing)  
+  SHA-256: `5e2580c6a9b0134870eed1c482c1dbd2dda95fa6797122d0519afe3222884277`  
 
-This BIOS has been tested for stability under normal operation. However, flashing modified firmware always carries risk. Proceed only if you are comfortable with recovery methods.  
-You assume full responsibility for your hardware.
+- **Google Drive (ZIP):**  
+  [ASUS-Z790-MOD-SZ790AD4-v.3001.zip](https://drive.google.com/file/d/1XGDSGi-zCav_Ib8sICg9wnf6Dy2VYS7k/view?usp=sharing)  
+  SHA-256: `364bd095b7e1f3b16fd7b31319bee0211b644be5b1b0980798a58467dc7d754e`  
+
+- **VirusTotal Report:**  
+  [Link](https://www.virustotal.com/gui/file/d194e738fad73853b766ab571e24b49b0374c80399b1440f3066df48ee2060d5)
+
+![Virustotal scan|690x352](upload://boqKYj94axGHm4wyTxZGLMyjs9Y.png)
 
 ---
+
+## Unlocked Advanced Menus
+
+| Category | Description | Safe to Adjust | Risky / Leave Alone |
+|----------|-------------|----------------|----------------------|
+| Intel Platform Debug | DSP routing, ICC clock tuning | Rarely needed outside dev work | May destabilize audio/bus |
+| Secure Boot Modes | AuditMode, DeployedMode, SecureVarPresent | Switch Standard ↔ Custom | Deployed/FIPS lock may brick |
+| Debug Configuration | DebugSetupVolatileData & DebugConfigData | Leave disabled | Can flood NVRAM, hurt perf |
+| Board / Platform Overrides | BoardInfoSetup & SIBoardItemControl | Not recommended | Breaks updates & drivers |
+| Extended OC Registers (OCMR) | Memory training beyond GUI | For extreme OC only | POST loops / black screens |
+| iGPU / Display Options | Intel PEI, DVMT, VBT, CdClock | DVMT Pre-Alloc, enable/disable iGPU | VBT wrong panel = no display; CdClock unstable |
+| Intel ME Configuration | ME State, PTT, FIPS, erase/unconfig | PTT, ME State (caution) | Erase/Unconfig wipes ME; FIPS lock |
+| Intel ME Debug Menus | HECI timeouts, polling, MCTP | None for normal use | Breaks PCIe/USB/ME → POST fail |
+
+---
+
+<b>Best regards,</b>  
+<b>NOLIMITS.MAX</b>
