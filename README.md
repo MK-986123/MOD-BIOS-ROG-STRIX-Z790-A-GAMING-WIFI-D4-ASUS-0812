@@ -1,7 +1,6 @@
-[wrap="center"]
-[color=#912]This is a straightforward process, but it is important to understand that you are working with **low-level firmware**.[/color]  
-[color=#912]Improper flashing always carries risk.[/color]  
-[/wrap]
+This is a straightforward process, but it is important to understand that you are working with **low-level firmware**.[/color]  
+Improper flashing always carries risk.[/color]  
+
 
 * The ASUS ROG STRIX Z790 series supports **USB BIOS FlashBack**, giving you a reliable recovery path.  
 * Keep a second USB stick with the **official firmware (same version)** ready so you can quickly revert if needed.  
@@ -41,8 +40,6 @@
 3. **Start FlashBack**  
    - Insert the USB into the dedicated **BIOS FLASHBACK** port (rear I/O, labeled).  
    - Press and hold the **FLASHBACK button** for ~3 seconds until the LED blinks three times.  
-
-![Flashback port & button|690x194](upload://s1vArHiNUkzFpDWvqh2bExU8J4c.jpeg)
 
 4. **Wait for Completion**  
    - Flashing typically takes 1–8 minutes.  
